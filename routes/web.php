@@ -21,7 +21,7 @@ Route::get('/signup', function () {
 
 Route::get('/signin', function () {
     return view('signin');
-});
+})->name('signin');
 
 Route::get('/dashboard', [
     'uses' => 'UserController@getDashboard',

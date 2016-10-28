@@ -33,9 +33,9 @@ class UserController extends Controller
 
         $user->save();
 
-        Auth::login($user);
+//        Auth::login($user);
 
-        return redirect()->route('dashboard');
+        return redirect()->route('signin');
     }
 
     public function postSignIn(Request $request)
@@ -56,6 +56,6 @@ class UserController extends Controller
         Auth::logout();
         Session::flush();
 
-        return redirect('/');
+        return redirect()->route('signin');
     }
 }
